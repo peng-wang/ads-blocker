@@ -1,0 +1,33 @@
+{
+    "manifest_version": 2,
+    "name": "ads-blocker",
+    "version": "1.0",
+    "applications": {
+        "gecko": {
+            "id": "peng-wang@hotmail.com"
+        }
+    },
+    "description": "Remove or disable advertisements in the web page",
+    "icons": {
+        "48": "icons/icon-48.png"
+    },
+    "permissions": [
+        "storage",
+        "webRequest"
+    ],
+    "browser_action": {
+        "default_icon": "icons/icon-36.png",
+        "default_title": "ads-blocker",
+        "default_popup": "popup/index.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.sina.com.cn/realstock/company/*"
+            ],
+            "js": [
+                "content-scripts/blocker.js"
+            ]
+        }
+    ]
+}
