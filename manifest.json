@@ -23,7 +23,7 @@
     "content_scripts": [
         {
             "matches": [
-                "*://*.sina.com.cn/realstock/company/*"
+                "<all_urls>"
             ],
             "js": [
                 "content-scripts/blocker.js"
